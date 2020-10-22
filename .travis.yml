@@ -1,0 +1,12 @@
+language: node_js
+cache:
+  yarn: true
+  directories:
+    - ~/npm
+notifications:
+  email: false
+node_js:
+  - '10'
+  - '12'
+script:
+  - yarn test:prod
