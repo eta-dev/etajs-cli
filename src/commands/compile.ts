@@ -1,10 +1,10 @@
-import type { Arguments } from 'yargs'
+import type { Arguments, Options } from 'yargs'
 
 import Eta = require('eta')
 
 import * as fs from 'fs'
 
-export default (testing: boolean): [string, string, any, (args: Arguments) => string | void] => {
+export default (testing: boolean): [string, string, Record<string, Options>, (args: Arguments) => string | void] => {
   return [
     'compile',
     'compile template into function',
