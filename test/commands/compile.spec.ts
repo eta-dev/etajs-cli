@@ -1,10 +1,10 @@
 import parse = require('yargs-parser')
 
-import type { Arguments } from 'yargs'
+import type { Arguments, Options } from 'yargs'
 
 import CompileCommand from '../../src/commands/compile'
 
-let command: [string, string, any, (args: Arguments) => void]
+let command: [string, string, Record<string, Options>, (args: Arguments) => void]
 
 describe('HelloCommand', () => {
   it('should be a function', () => {
